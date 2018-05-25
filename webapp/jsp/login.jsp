@@ -1,0 +1,73 @@
+<%@ page language="java" import="java.util.*" pageEncoding="UTF-8"%>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	<title>Login</title>
+	<base href="<%=basePath%>">
+	<link rel="stylesheet" type="text/css" href="CSS/style.css">
+	<script type="text/javascript" src="js/lib/jquery/jquery-1.7.1.js"></script>
+	<script type="text/javascript" src="js/lib/jquery/jquery-extend.js"></script>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords"
+		content="Lambent Login Form Responsive, Login Form Web Template, Flat Pricing Tables, Flat Drop-Downs, Sign-Up Web Templates, Flat Web Templates, Login Sign-up Responsive Web Template, Smartphone Compatible Web Template, Free Web Designs for Nokia, Samsung, LG, Sony Ericsson, Motorola Web Design" />
+		
+	<script type="application/x-javascript"> 
+		addEventListener("load", function() { 
+									setTimeout(hideURLbar, 0); 
+								}, false); 
+		function hideURLbar()
+		{ 
+			window.scrollTo(0,1); 
+		} 
+	</script>
+</head>
+
+<body>
+	<!-- <h1>轻轻摇曳的登录表单</h1> -->
+	<div class="main-agileinfo">
+		<h2>我是小可爱吗</h2>
+		<form id="login_in_form" action="jsp/lucky.jsp" method="post">
+			 <!-- <input type="text" name="name" class="name" placeholder="Usename" required="">
+			 <input type="password" name="password" class="password" placeholder="Password" required=""> -->
+			<!-- <ul>
+				<li><input type="checkbox" id="brand1" value="">
+				    <label for="brand1"><span></span>记得我</label>
+				</li>
+			</ul> -->
+			<!-- <a href="#">忘记密码? </a><br>
+			<div class="clear"></div> -->
+		</form>
+		<input type="submit" id="login_in" value="是">
+		<input type="submit" id="login_out" value="不是，是臭猪头">
+	</div>
+	<div class="footer-w3l">
+		<p class="agile">
+			&copy; 小可爱</a>
+		</p>
+	</div>
+	<input type="hidden" value="<%=basePath%>" id=basePath>
+</body>
+
+<script>
+//.left-banner直接调用.fadeAnimate，返回它自身
+
+$("#login_in").click(function(){	
+
+	$("#login_in_form").submit();
+		
+});
+$("#login_out").click(function(){	
+
+	alert("你才是臭猪头！");
+		
+});
+</script>
+
+
+</html>
