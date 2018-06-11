@@ -61,7 +61,15 @@
 		clickCallback: function() {
 			//此处访问接口获取奖品
 			function random() {
-				return Math.floor(Math.random() * 60)-30;
+				var temp = Math.floor(Math.random() * 12);
+				switch(temp){
+					case 0:return 	60;break;
+					case 1:return 	120;break;
+					case 2:return 	180;break;
+					case 3:return 	240;break;
+					case 4:return 	300;break;
+					default:return 	5;break;
+				}
 			}
 			this.goKinerLottery(random());
 		}, //点击抽奖按钮,再次回调中实现访问后台获取抽奖结果,拿到抽奖结果后显示抽奖画面
